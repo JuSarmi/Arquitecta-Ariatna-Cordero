@@ -1,0 +1,121 @@
+<!-- index.html – versión actualizada con imágenes de /assets/img/portfolio/ -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ariatna Rincón Cordero – Arquitecta Freelance</title>
+  <meta name="description" content="Arquitecta freelance especializada en diseño funcional y sostenible: renders, BIM y consultoría técnica.">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Correcciones rápidas (puedes moverlas al CSS cuando todo se vea bien) -->
+  <style>
+    /* ===== HERO ====================================================== */
+    .hero{
+      background-size:cover;
+      background-repeat:no-repeat;
+      background-position:center;
+      min-height:85vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      position:relative;
+      color:#fff;
+    }
+    .hero .overlay{
+      background:rgba(0,0,0,.45);
+      padding:4rem 2rem;
+      text-align:center;
+      border-radius:.5rem;
+    }
+    /* ===== NAVBAR ==================================================== */
+    .navbar{position:fixed;top:0;left:0;width:100%;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.06);z-index:1000;
+      padding:.75rem 2rem;display:flex;align-items:center;justify-content:center;gap:2rem;}
+    .navbar .brand{position:absolute;left:2rem;font-weight:600;font-size:1.05rem;}
+    .navbar nav{display:flex;gap:2rem;align-items:center;}
+    .navbar a{color:#333;text-decoration:none;font-weight:500;position:relative;}
+    .navbar a.active::after,.navbar a:hover::after{
+      content:"";position:absolute;left:0;bottom:-4px;width:100%;height:2px;background:#bd181d;}
+    /* ===== GALERÍA DECORATIVA ======================================= */
+    .decor-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:4rem auto;max-width:1100px;padding:0 1rem;}
+    .decor-gallery img{width:100%;height:220px;object-fit:cover;border-radius:.5rem;}
+    /* ===== CTA ======================================================= */
+    .cta{background:url('assets/img/cta_bg.webp') center/cover no-repeat;color:#fff;text-align:center;padding:5rem 1rem;}
+    /* Pequeñas utilidades */
+    .btn-primary{background:#bd181d;color:#fff;padding:.75rem 1.5rem;border-radius:.25rem;display:inline-block;margin-top:1rem;}
+    .btn-primary:hover{opacity:.9;}
+  </style>
+</head>
+<body>
+<!-- NAVBAR dentro de index.html -->
+<header class="navbar">
+  <div class="brand">Ariatna Rincón Cordero</div>
+  <nav>
+    <a href="index.html" class="active">Inicio</a>
+    <!-- ANTES: <a href="sobre.html">Marca</a> -->
+    <a href="sobre.html">Sobre mí</a>
+    <a href="portafolio.html">Portafolio</a>
+    <a href="contacto.html" class="btn-cta">Contacto</a>
+  </nav>
+</header>
+
+  <!-- Hero principal -->
+  <section class="hero" style="background-image:url('assets/img/hero_principal.webp');">
+    <div class="overlay">
+      <!-- (Frase retirada) -->
+      <a href="contacto.html" class="btn-primary">Agenda una videollamada</a>
+    </div>
+  </section>
+
+  <!-- Métricas rápidas -->
+  <section class="stats">
+    <div class="stat"><span class="num">7+</span><span class="label">años de experiencia</span></div>
+    <div class="stat"><span class="num">25</span><span class="label">proyectos entregados</span></div>
+    <div class="stat"><span class="num">100%</span><span class="label">clientes satisfechos</span></div>
+  </section>
+
+  <!-- Mini sobre mí (teaser) -->
+  <section class="about-teaser">
+    <div class="wrapper">
+      <h2>Arquitectura con visión técnica</h2>
+      <p>Combino <strong>AutoCAD, Revit y BIM</strong> para convertir tus ideas en planos constructivos, renders fotorrealistas y soluciones listas para obra. Conoce mi enfoque y valores.</p>
+      <a href="sobre.html" class="link-arrow">Descubre más sobre mi trabajo</a>
+    </div>
+  </section>
+
+  <!-- Galería decorativa con renders reales -->
+  <section class="decor-gallery">
+    <img src="assets/img/portfolio/render_proyecto-01_1.webp"  alt="Render peatonal nocturno de proyecto residencial">
+    <img src="assets/img/portfolio/render_proyecto-01_4.webp"  alt="Volumetría exterior de edificio multifamiliar">
+    <img src="assets/img/portfolio/thumb_proyecto-02-HD.webp"  alt="Vista conceptual en planta de complejo cultural">
+    <img src="assets/img/portfolio/thumb_proyecto-04-HD.webp"  alt="Perspectiva a nivel calle de urbanización">
+  </section>
+
+  <!-- Servicios destacados -->
+  <section class="services-preview">
+    <h2>¿En qué puedo ayudarte?</h2>
+    <div class="cards">
+      <article class="card">
+        <h3>Diseño Arquitectónico</h3>
+      </article>
+      <article class="card">
+        <h3>Planos Técnicos &amp; BIM</h3>
+      </article>
+      <article class="card">
+        <h3>Modelado 3D &amp; Renders</h3>
+      </article>
+    </div>
+    <a href="sobre.html#servicios" class="link-arrow">Ver todos los servicios</a>
+  </section>
+
+  <!-- CTA final con imagen de fondo -->
+  <section class="cta">
+    <h2>¿Listo para llevar tu proyecto al siguiente nivel?</h2>
+    <a href="contacto.html" class="btn-primary">Contáctame ahora</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Ariatna Rincón Cordero. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
