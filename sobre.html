@@ -1,0 +1,108 @@
+<!-- sobre.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre Ariatna Rincón | Arquitecta Freelance</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="site-header">
+    <div class="nav-wrapper">
+      <a href="index.html" class="logo">Ariatna Rincón</a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="sobre.html" class="active">Sobre mí</a></li>
+          <li><a href="proyectos.html">Proyectos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__bg" style="background-image: url('assets/img/hero_sobre.webp');"></div>
+    <div class="hero__content container">
+      <h1>Detrás de cada espacio hay una historia</h1>
+      <p class="tagline">Conozca a la arquitecta que transforma ideas en planos realizables.</p>
+    </div>
+  </section>
+
+  <!-- SOBRE MÍ -->
+  <section class="image-text container">
+    <div class="split">
+      <div>
+        <img src="assets/img/ariatna-rincon.webp" alt="Retrato de la arquitecta Ariatna Rincón" />
+      </div>
+      <div class="split__text">
+        <h2>Sobre Ariatna Rincón Cordero</h2>
+        <p>Soy <strong>Ariatna Rincón Cordero</strong>, arquitecta freelance con sólida formación y experiencia en el desarrollo de planos técnicos, modelado 3D, diseño arquitectónico y planificación urbana. Trabajo principalmente con pequeñas constructoras, estudios locales y empresas que requieren <em>soporte técnico remoto</em> en sus proyectos.</p>
+        <p>He realizado planos arquitectónicos y estructurales cumpliendo altos estándares técnicos, claridad para obra y adaptabilidad. Domino herramientas como <strong>AutoCAD, Revit y SketchUp</strong>, trabajando sin fricciones en flujos CAD o BIM.</p>
+        <p>Mi enfoque se basa en comprender profundamente cada proyecto para ofrecer soluciones técnicas y visuales claras, precisas y listas para ejecutarse.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFERENCIALES -->
+  <section class="services container">
+    <h2 class="section-title text-center">¿Qué me diferencia como arquitecta freelance?</h2>
+    <ul class="service-grid">
+      <li class="card"><strong>Adaptación</strong> a metodologías CAD y BIM.</li>
+      <li class="card"><strong>Atención cercana</strong> y personalizada.</li>
+      <li class="card"><strong>Compromiso</strong> con la calidad técnica y visual.</li>
+      <li class="card"><strong>Experiencia</strong> con equipos remotos y entregas claras.</li>
+    </ul>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section class="services container">
+    <h2 class="section-title text-center">Servicios disponibles</h2>
+    <div class="service-grid">
+      <article class="card">
+        <h3>Diseño arquitectónico residencial y comercial</h3>
+        <p>Propuestas integrales para hogares, locales y oficinas.</p>
+      </article>
+      <article class="card">
+        <h3>Elaboración de planos técnicos</h3>
+        <p>Documentación completa para construcción y urbanismo.</p>
+      </article>
+      <article class="card">
+        <h3>Modelado 3D y renderizado</h3>
+        <p>Visualizaciones realistas para comprender cada detalle.</p>
+      </article>
+      <article class="card">
+        <h3>Soporte técnico y documental</h3>
+        <p>Acompañamiento remoto en todas las fases del proyecto.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="cta-banner__bg" style="background-image: url('assets/img/cta-proyectos.jpg');"></div>
+    <div class="cta-banner__content container">
+      <h2>¿Quieres ver resultados?</h2>
+      <p>Explora algunos proyectos donde la técnica se une con la creatividad.</p>
+      <a href="proyectos.html" class="cta-primary">Ver proyectos</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Ariatna Rincón Cordero · Arquitecta Freelance</p>
+    </div>
+  </footer>
+
+  <script>
+    // Año dinámico
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

@@ -1,108 +1,119 @@
+<!-- index.html – versión actualizada con imágenes de /assets/img/portfolio/ -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- Metadatos generales del documento -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- Título y descripción para motores de búsqueda -->
   <title>Ariatna Rincón Cordero – Arquitecta Freelance</title>
-  <meta name="description" content="Soy arquitecta freelance con experiencia en diseño arquitectónico, modelado 3D y elaboración de planos. Transformo ideas en espacios funcionales y sostenibles.">
+  <meta name="description" content="Arquitecta freelance especializada en diseño funcional y sostenible: renders, BIM y consultoría técnica.">
+  <link rel="stylesheet" href="assets/css/style.css">
 
-  <!-- Enlace a la hoja de estilos (opcional) -->
-  <link rel="stylesheet" href="estilos.css">
+  <!-- Correcciones rápidas (puedes moverlas al CSS cuando todo se vea bien) -->
+  <style>
+    /* ===== HERO ====================================================== */
+    .hero{
+      background-size:cover;
+      background-repeat:no-repeat;
+      background-position:center;
+      min-height:85vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      position:relative;
+      color:#fff;
+    }
+    .hero .overlay{
+      background:rgba(0,0,0,.45);
+      padding:4rem 2rem;
+      text-align:center;
+      border-radius:.5rem;
+    }
+    /* ===== NAVBAR ==================================================== */
+    .navbar{position:fixed;top:0;left:0;width:100%;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.06);z-index:1000;
+      padding:.75rem 2rem;display:flex;align-items:center;justify-content:center;gap:2rem;}
+    .navbar .brand{position:absolute;left:2rem;font-weight:600;font-size:1.05rem;}
+    .navbar nav{display:flex;gap:2rem;align-items:center;}
+    .navbar a{color:#333;text-decoration:none;font-weight:500;position:relative;}
+    .navbar a.active::after,.navbar a:hover::after{
+      content:"";position:absolute;left:0;bottom:-4px;width:100%;height:2px;background:#bd181d;}
+    /* ===== GALERÍA DECORATIVA ======================================= */
+    .decor-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:4rem auto;max-width:1100px;padding:0 1rem;}
+    .decor-gallery img{width:100%;height:220px;object-fit:cover;border-radius:.5rem;}
+    /* ===== CTA ======================================================= */
+    .cta{background:url('assets/img/cta_bg.webp') center/cover no-repeat;color:#fff;text-align:center;padding:5rem 1rem;}
+    /* Pequeñas utilidades */
+    .btn-primary{background:#bd181d;color:#fff;padding:.75rem 1.5rem;border-radius:.25rem;display:inline-block;margin-top:1rem;}
+    .btn-primary:hover{opacity:.9;}
+  </style>
 </head>
 <body>
-  <!-- Encabezado con el título principal y subtítulo -->
-  <header>
-    <h1>Ariatna Rincón Cordero – Arquitecta Freelance</h1>
-    <p>Transformando ideas en espacios funcionales y sostenibles</p>
-  </header>
+<!-- NAVBAR dentro de index.html -->
+<header class="navbar">
+  <div class="brand">Ariatna Rincón Cordero</div>
+  <nav>
+    <a href="index.html" class="active">Inicio</a>
+    <!-- ANTES: <a href="sobre.html">Marca</a> -->
+    <a href="sobre.html">Sobre mí</a>
+    <a href="portafolio.html">Portafolio</a>
+    <a href="contacto.html" class="btn-cta">Contacto</a>
+  </nav>
+</header>
 
-  <!-- Contenido principal del sitio -->
-  <main>
-    <!-- Sección "Sobre mí" -->
-    <section id="sobre-mi">
-      <h2>Sobre mí</h2>
-      <p>Soy arquitecta freelance con experiencia en diseño arquitectónico, modelado 3D, elaboración de planos técnicos y visualización de proyectos. Trabajo con herramientas avanzadas como AutoCAD, Revit y SketchUp para ofrecer soluciones precisas, personalizadas y alineadas con las necesidades específicas de cada cliente.</p>
-      <p>Me especializo en colaborar con empresas pequeñas, estudios de arquitectura y particulares que necesitan apoyo técnico o visual en el desarrollo de proyectos residenciales, urbanísticos o comerciales. Cada diseño que realizo se enfoca en combinar funcionalidad, sostenibilidad y estética, para crear espacios que realmente funcionen para quienes los habitan o los desarrollan.</p>
-    </section>
-    
-    <!-- Sección de servicios -->
-    <section id="servicios">
-      <h2>Servicios que ofrezco</h2>
-      
-      <article>
-        <h3>🏠 Diseño Arquitectónico Residencial y Comercial</h3>
-        <ul>
-          <li>Proyectos de vivienda nueva o remodelación.</li>
-          <li>Distribución funcional de espacios interiores y exteriores.</li>
-          <li>Diseño personalizado según requerimientos del cliente.</li>
-        </ul>
+  <!-- Hero principal -->
+  <section class="hero" style="background-image:url('assets/img/hero_principal.webp');">
+    <div class="overlay">
+      <!-- (Frase retirada) -->
+      <a href="contacto.html" class="btn-primary">Agenda una videollamada</a>
+    </div>
+  </section>
+
+  <!-- Métricas rápidas -->
+  <section class="stats">
+    <div class="stat"><span class="num">7+</span><span class="label">años de experiencia</span></div>
+    <div class="stat"><span class="num">25</span><span class="label">proyectos entregados</span></div>
+    <div class="stat"><span class="num">100%</span><span class="label">clientes satisfechos</span></div>
+  </section>
+
+  <!-- Mini sobre mí (teaser) -->
+  <section class="about-teaser">
+    <div class="wrapper">
+      <h2>Arquitectura con visión técnica</h2>
+      <p>Combino <strong>AutoCAD, Revit y BIM</strong> para convertir tus ideas en planos constructivos, renders fotorrealistas y soluciones listas para obra. Conoce mi enfoque y valores.</p>
+      <a href="sobre.html" class="link-arrow">Descubre más sobre mi trabajo</a>
+    </div>
+  </section>
+
+  <!-- Galería decorativa con renders reales -->
+  <section class="decor-gallery">
+    <img src="assets/img/portfolio/render_proyecto-01_1.webp"  alt="Render peatonal nocturno de proyecto residencial">
+    <img src="assets/img/portfolio/render_proyecto-01_4.webp"  alt="Volumetría exterior de edificio multifamiliar">
+    <img src="assets/img/portfolio/thumb_proyecto-02-HD.webp"  alt="Vista conceptual en planta de complejo cultural">
+    <img src="assets/img/portfolio/thumb_proyecto-04-HD.webp"  alt="Perspectiva a nivel calle de urbanización">
+  </section>
+
+  <!-- Servicios destacados -->
+  <section class="services-preview">
+    <h2>¿En qué puedo ayudarte?</h2>
+    <div class="cards">
+      <article class="card">
+        <h3>Diseño Arquitectónico</h3>
       </article>
-      
-      <article>
-        <h3>📐 Elaboración de Planos Técnicos</h3>
-        <ul>
-          <li>Planos arquitectónicos y estructurales en AutoCAD o Revit.</li>
-          <li>Documentación completa para ejecución de obra.</li>
-          <li>Integración de normas técnicas y detalle constructivo.</li>
-        </ul>
+      <article class="card">
+        <h3>Planos Técnicos &amp; BIM</h3>
       </article>
-      
-      <article>
-        <h3>🏙️ Diseño Urbanístico y Planimetría</h3>
-        <ul>
-          <li>Lotificación de terrenos y planificación de áreas urbanas.</li>
-          <li>Diseño de espacio público e integración del entorno natural.</li>
-          <li>Soporte técnico para presentaciones de proyectos urbanos.</li>
-        </ul>
+      <article class="card">
+        <h3>Modelado 3D &amp; Renders</h3>
       </article>
-      
-      <article>
-        <h3>🧱 Modelado 3D y Renderización</h3>
-        <ul>
-          <li>Modelado tridimensional con nivel conceptual o detallado.</li>
-          <li>Renders fotorrealistas para ventas, presentaciones o visualización.</li>
-          <li>Escenarios urbanos, edificios, interiores y elementos arquitectónicos.</li>
-        </ul>
-      </article>
-      
-      <article>
-        <h3>📊 Consultoría y Apoyo Técnico</h3>
-        <ul>
-          <li>Soporte a estudios de arquitectura y constructoras.</li>
-          <li>Adaptación a metodologías de trabajo existentes (CAD, BIM).</li>
-          <li>Entregables claros, organizados y adaptados al cliente.</li>
-        </ul>
-      </article>
-    </section>
-    
-    <!-- Sección "¿Por qué trabajar conmigo?" -->
-    <section id="porque-trabajar-conmigo">
-      <h2>¿Por qué trabajar conmigo?</h2>
-      <ul>
-        <li>Formación sólida en arquitectura y enfoque técnico riguroso.</li>
-        <li>Dominio de herramientas digitales modernas.</li>
-        <li>Atención personalizada y compromiso con cada proyecto.</li>
-        <li>Capacidad para trabajar en remoto con clientes de habla hispana.</li>
-      </ul>
-    </section>
-    
-    <!-- Sección de llamada a la acción -->
-    <section id="contacto">
-      <h2>¿Estás desarrollando un proyecto y necesitas apoyo?</h2>
-      <p>Puedo ayudarte a visualizarlo, estructurarlo y llevarlo al siguiente nivel. Si quieres transformar tus ideas en planos concretos o renders impactantes, estaré encantada de colaborar contigo.</p>
-    </section>
-  </main>
-  <form>
-    <p>Mandame tu peticion</p>
-    <input type="text" name="message" placeholder = "Me gustaria un diseño en AutoCAD">
-    <p> Escribe tu numero de Whatsapp en este recuadro para agendar una consulta personalizada gratis!</p>
-    <input type="text" name="phone" placeholder = "3120000000">
-    <input type="submit" required>
-  </form>
-  <!-- Pie de página -->
+    </div>
+    <a href="sobre.html#servicios" class="link-arrow">Ver todos los servicios</a>
+  </section>
+
+  <!-- CTA final con imagen de fondo -->
+  <section class="cta">
+    <h2>¿Listo para llevar tu proyecto al siguiente nivel?</h2>
+    <a href="contacto.html" class="btn-primary">Contáctame ahora</a>
+  </section>
+
   <footer>
     <p>&copy; 2025 Ariatna Rincón Cordero. Todos los derechos reservados.</p>
   </footer>
