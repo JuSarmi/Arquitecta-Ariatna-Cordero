@@ -1,9 +1,9 @@
-user-agent: googlebot
-disallow: /admin
+User-agent: googlebot
+Disallow: /admin
 
-user-agent: *
-disallow: /app
-disallow: /admin
-disallow: /stats
+User-agent: *
+Disallow: /app
+Disallow: /admin
+Disallow: /stats
 
 Sitemap: https://jusarmi.github.io/Arquitecta-Ariatna-Rincon/sitemap.xml
