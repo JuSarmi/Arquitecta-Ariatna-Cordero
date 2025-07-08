@@ -1,9 +1,12 @@
-User-agent: googlebot
-Disallow: /admin
+# https://jusarmi.github.io/robots.txt
+User-agent: Googlebot
+Disallow: /admin/
 
+# Bloqueo general para otros bots
 User-agent: *
-Disallow: /app
-Disallow: /admin
-Disallow: /stats
+Disallow: /app/
+Disallow: /admin/
+Disallow: /stats/
 
-Sitemap: https://jusarmi.github.io/Arquitecta-Ariatna-Rincon/sitemap.xml
+# Sitemap XML
+Sitemap: https://jusarmi.github.io/Arquitecta-Ariatna-Cordero/sitemap.xml
