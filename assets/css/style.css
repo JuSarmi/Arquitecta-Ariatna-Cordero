@@ -107,13 +107,15 @@ a:hover{color:var(--clr-accent)}
   text-align:center;
   color:var(--clr-light);
 }
-.hero__bg{
-  position:absolute;
-  inset:0;
-  background-size:cover;
-  background-position:center;
-  background-attachment:fixed;
-  filter:brightness(.45);
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('../img/hero_principal.webp'); /* OJO: usa ../ si tu CSS está en assets/css/ */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  filter: brightness(.45);
 }
 .hero__content{position:relative;z-index:1;padding-inline:var(--space-md);}  
 .hero__content h1{
@@ -136,6 +138,19 @@ a:hover{color:var(--clr-accent)}
   transition:background .25s;
 }
 .cta-primary:hover{background:#8e1515;}
+
+.portfolio-hero {
+  background-image: url('../img/portfolio/render_proyecto-01_1.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.contacto-hero {
+  background-image: url('../img/cta_background.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
 
 /******************************
   STATS STRIP
@@ -196,11 +211,21 @@ a:hover{color:var(--clr-accent)}
   color:var(--clr-light);
   text-align:center;
 }
-.cta-banner__bg{
-  position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.5);
+.cta-banner__bg {
+  background-image: url('../img/cta_bg.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 .cta-banner__content{position:relative;padding-inline:var(--space-md);} 
 .cta-banner h2{font-size:clamp(2.2rem,5vw,3.2rem);max-width:30ch;margin-inline:auto;}
+
+.cta-banner.cta-bg {
+  background-image: url('../img/cta_bg.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
 
 /******************************
   FOOTER
