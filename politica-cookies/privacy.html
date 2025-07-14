@@ -1,0 +1,23 @@
+<div id="cookie-banner">
+  <p>Usamos cookies para mejorar tu experiencia. ¿Aceptas?</p>
+  <button onclick="acceptAll()">Aceptar</button>
+  <button onclick="rejectAll()">Rechazar</button>
+  <button onclick="openPreferences()">Preferencias</button>
+  <a href="/politica-cookies">Política de cookies</a>
+</div>
+<script>
+  function acceptAll(){
+    document.cookie = "cookie_consent=true; path=/; max-age=31536000";
+    setCategory('analytics',true);
+    setCategory('marketing',true);
+    hideBanner();
+    loadTrackers();
+  }
+  function rejectAll(){
+    document.cookie = "cookie_consent=true; path=/; max-age=31536000";
+    setCategory('analytics',false);
+    setCategory('marketing',false);
+    hideBanner();
+  }
+  // etc.
+</script>
