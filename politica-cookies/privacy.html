@@ -1,23 +1,13 @@
-<div id="cookie-banner">
-  <p>Usamos cookies para mejorar tu experiencia. ¿Aceptas?</p>
-  <button onclick="acceptAll()">Aceptar</button>
-  <button onclick="rejectAll()">Rechazar</button>
-  <button onclick="openPreferences()">Preferencias</button>
-  <a href="/politica-cookies/privacy.html">Política de cookies</a>
-</div>
-<script>
-  function acceptAll(){
-    document.cookie = "cookie_consent=true; path=/; max-age=31536000";
-    setCategory('analytics',true);
-    setCategory('marketing',true);
-    hideBanner();
-    loadTrackers();
-  }
-  function rejectAll(){
-    document.cookie = "cookie_consent=true; path=/; max-age=31536000";
-    setCategory('analytics',false);
-    setCategory('marketing',false);
-    hideBanner();
-  }
-  // etc.
-</script>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Política de Cookies</title>
+    <!-- Puedes añadir estilos si quieres -->
+</head>
+<body>
+    <h1>Política de Cookies</h1>
+    <p>En esta página, explicamos qué son las cookies, cómo las usamos...</p>
+    <!-- TODO EL TEXTO DE TU POLÍTICA AQUÍ -->
+</body>
+</html>
