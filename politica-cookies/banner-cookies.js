@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <div id="cookie-banner">
             <p>
                 Utilizamos cookies para mejorar tu experiencia en nuestro sitio web. Al continuar, aceptas nuestro uso de cookies. Puedes obtener más información en nuestra 
-                <a href="/politica-cookies/privacy.html">Política de Cookies</a>.
+                <a href="politica-cookies/privacy.html">Política de Cookies</a>.
             </p>
             <div class="buttons">
                 <button id="accept-cookies-btn">Aceptar</button>
