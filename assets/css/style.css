@@ -213,7 +213,7 @@ a:hover{color:var(--clr-accent)}
   text-align:center;
 }
 .cta-banner__bg {
-  background-image: url('../img/cta_bg.webp');
+  background-image: url('../img/cta_background.webp');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -222,7 +222,7 @@ a:hover{color:var(--clr-accent)}
 .cta-banner h2{font-size:clamp(2.2rem,5vw,3.2rem);max-width:30ch;margin-inline:auto;}
 
 .cta-banner.cta-bg {
-  background-image: url('../img/cta_bg.webp');
+  background-image: url('../img/cta_background.webp');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
