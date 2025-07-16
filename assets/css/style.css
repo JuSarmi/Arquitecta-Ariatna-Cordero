@@ -205,27 +205,36 @@ a:hover{color:var(--clr-accent)}
 /******************************
   CTA BANNER
 ******************************/
-.cta-banner{
-  position:relative;
-  min-height:420px;
-  display:flex;align-items:center;justify-content:center;
-  color:var(--clr-light);
-  text-align:center;
+.cta-banner {
+  position: relative; /* MUY IMPORTANTE: El padre debe ser relativo */
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-light);
+  text-align: center;
+  overflow: hidden; /* Evita que el fondo se salga si hay bordes redondeados */
 }
-.cta-banner__bg {
-  background-image: url('../img/cta_background.webp');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-.cta-banner__content{position:relative;padding-inline:var(--space-md);} 
-.cta-banner h2{font-size:clamp(2.2rem,5vw,3.2rem);max-width:30ch;margin-inline:auto;}
 
-.cta-banner.cta-bg {
+.cta-banner__bg {
+  /* --- ESTAS SON LAS LÍNEAS CLAVE --- */
+  position: absolute; /* 1. Lo sacamos del flujo normal */
+  inset: 0;           /* 2. Lo estiramos para que ocupe todo el padre (top, right, bottom, left = 0) */
+  z-index: -1;        /* 3. Lo enviamos detrás del contenido */
+
+  /* --- Tus reglas existentes --- */
   background-image: url('../img/cta_background.webp');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: fixed; /* Opcional: si quieres el efecto parallax */
+  
+  /* --- RECOMENDACIÓN: Añadir un filtro para que el texto se lea mejor --- */
+  filter: brightness(.45);
+}
+
+.cta-banner__content {
+  position: relative; /* Asegura que el contenido se mantenga visible */
+  padding-inline: var(--space-md);
 }
 
 /******************************
