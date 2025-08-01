@@ -437,3 +437,22 @@ a:hover{color:var(--clr-accent)}
     border-radius: 4px;
   }
 }
+
+/* =========  LOGO  ========= */
+.logo img{
+  display:block;          /* elimina espacio bajo inline-img */
+  width: 42px;            /* alto similar al texto original */
+  height:auto;
+  object-fit:contain;     /* respeta proporción */
+}
+
+/* opcional: si quieres que siga apareciendo el nombre al lado
+   (logo + texto), descomenta lo siguiente y pon el texto fuera del <img> */
+/*
+.logo{
+  display:flex;
+  align-items:center;
+  gap:.5rem;
+  font-weight:600;       // el texto si lo dejas
+}
+*/
