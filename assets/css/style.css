@@ -59,7 +59,6 @@ a:hover{color:var(--clr-accent)}
   position:fixed;
   inset:0 0 auto 0;
   background:rgba(0,0,0,.55);
-  backdrop-filter:blur(10px);
   z-index:100;
   box-shadow:0 4px 10px rgba(0,0,0,.15);
 }
@@ -402,70 +401,58 @@ a:hover{color:var(--clr-accent)}
     display: block;
   }
 
-.main-nav {
-  position: fixed;
-  inset: 0;
-  
-  /* 1. VOLVEMOS A USAR FLEXBOX PARA EL CENTRADO */
-  display: flex;
-  justify-content: center;
-  align-items: center; /* Esto es correcto */
+  .main-nav {
+    position: fixed;
+    inset: 0;
+    
+    display: flex;
+    flex-direction: column; /* Apila los elementos verticalmente */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center;     /* Centra horizontalmente */
+    
+    background: rgba(28, 29, 33, 0.95); /* Fondo sólido con ligera transparencia */
 
-  /* 2. Mantenemos el fondo en el pseudo-elemento */
-  /* (El contenedor principal no tiene fondo) */
-  
-  visibility: hidden;
-  opacity: 0;
-  transform: translateY(-25%);
-  transition: transform 0.4s ease, opacity 0.4s ease, visibility 0.4s;
+    /* Ocultamos el menú por defecto */
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.95); /* Animación de zoom sutil */
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  }
+
+  /* Muestra el menú cuando está abierto */
+  .nav-open .main-nav {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .main-nav ul {
+    display: flex; /* Permite que los elementos de la lista se organicen */
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-lg);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .main-nav a {
+    font-size: 1.5rem;
+    padding: .5rem 1rem;
+    color: var(--clr-light);
+  }
+
+  .main-nav .cta-primary {
+    background: var(--clr-accent);
+    color: var(--clr-light);
+    padding: .75em 1.5em;
+    border-radius: 4px;
+  }
+
+  .main-nav .cta-primary:hover {
+    background: #8e1515;
+  }
 }
-
-.main-nav::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background-color: #1c1d21;
-  background-color: rgba(28, 29, 33, 0.98);
-  backdrop-filter: blur(5px);
-}
-
-/* Regla para mostrar el menú (sin cambios) */
-.nav-open .main-nav {
-  transform: translateY(0);
-  opacity: 1;
-  visibility: visible;
-}
-
-/* --- ESTA ES LA REGLA CORREGIDA Y FINAL --- */
-.main-nav ul {
-  flex-direction: column;
-  gap: var(--space-lg);
-  text-align: center;
-  
-  /* ESTA ES LA LÍNEA MÁGICA QUE FALTABA */
-  margin-top: -10vh; /* Empuja la lista hacia arriba para centrarla mejor */
-}
-
-/* Reglas de los enlaces (sin cambios) */
-.main-nav a {
-  font-size: 1.5rem;
-  padding: .5rem 1rem;
-  color: var(--clr-light);
-}
-
-.main-nav .cta-primary {
-  background: var(--clr-accent);
-  color: var(--clr-light);
-  padding: .75em 1.5em;
-  border-radius: 4px;
-  font-size: 1.5rem;
-}
-
-.main-nav .cta-primary:hover {
-  background: #8e1515;
-}
-
 
 /* =========  LOGO  ========= */
 .logo {
