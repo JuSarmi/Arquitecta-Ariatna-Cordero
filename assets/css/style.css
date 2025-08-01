@@ -406,65 +406,65 @@ a:hover{color:var(--clr-accent)}
   position: fixed;
   inset: 0;
   
-  /* Quitamos el fondo y el backdrop-filter de aquí */
+  /* 1. VOLVEMOS A USAR FLEXBOX PARA EL CENTRADO */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Esto es correcto */
+
+  /* 2. Mantenemos el fondo en el pseudo-elemento */
+  /* (El contenedor principal no tiene fondo) */
   
-  padding-top: clamp(8rem, 25vh, 12rem);
   visibility: hidden;
   opacity: 0;
   transform: translateY(-25%);
   transition: transform 0.4s ease, opacity 0.4s ease, visibility 0.4s;
 }
 
-/* --- ESTA ES LA NUEVA REGLA CLAVE --- */
 .main-nav::before {
   content: '';
   position: absolute;
   inset: 0;
-  z-index: -1; /* Se coloca detrás del contenido del menú (los enlaces) */
-  
-  /* Fondo de respaldo para todos los navegadores */
+  z-index: -1;
   background-color: #1c1d21;
-  
-  /* Fondo con transparencia y efecto para navegadores modernos */
   background-color: rgba(28, 29, 33, 0.98);
   backdrop-filter: blur(5px);
 }
 
+/* Regla para mostrar el menú (sin cambios) */
+.nav-open .main-nav {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+/* --- ESTA ES LA REGLA CORREGIDA Y FINAL --- */
 .main-nav ul {
-  /* 1. Mantenemos la dirección de columna */
   flex-direction: column;
-  
-  /* 2. Reseteamos la alineación para que no se centre verticalmente */
-  align-items: initial; /* O align-items: stretch; */
-  
-  /* 3. Mantenemos la separación y el centrado de texto */
   gap: var(--space-lg);
   text-align: center;
   
-  /* 4. Nos aseguramos de que no haya márgenes inesperados */
-  margin: 0;
-  padding: 0;
+  /* ESTA ES LA LÍNEA MÁGICA QUE FALTABA */
+  margin-top: -10vh; /* Empuja la lista hacia arriba para centrarla mejor */
 }
 
-  .main-nav a {
-    font-size: 1.5rem;
-    padding: .5rem 1rem;
-    color: var(--clr-light); /* Aseguramos el color en el menú abierto */
-  }
-  
-  .main-nav .cta-primary {
-    background: var(--clr-accent);
-    color: var(--clr-light);
-    padding: .75em 1.5em;
-    border-radius: 4px;
-    font-size: 1.5rem;
-  }
-
-  .main-nav .cta-primary:hover {
-    background: #8e1515;
-  }
+/* Reglas de los enlaces (sin cambios) */
+.main-nav a {
+  font-size: 1.5rem;
+  padding: .5rem 1rem;
+  color: var(--clr-light);
 }
 
+.main-nav .cta-primary {
+  background: var(--clr-accent);
+  color: var(--clr-light);
+  padding: .75em 1.5em;
+  border-radius: 4px;
+  font-size: 1.5rem;
+}
+
+.main-nav .cta-primary:hover {
+  background: #8e1515;
+}
 
 
 /* =========  LOGO  ========= */
