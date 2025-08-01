@@ -391,60 +391,69 @@ a:hover{color:var(--clr-accent)}
   transform: rotate(90deg);
 }
 
+/* Reemplaza la media query @media (max-width: 768px) completa con esto */
 
-/* Media Query para pantallas pequeñas (móviles) */
 @media (max-width: 768px) {
-  /* CAMBIO 1: Ajustar el nav-wrapper para que no limite el menú */
   .nav-wrapper {
     padding-inline: var(--space-md);
   }
 
   .nav-toggle {
-    display: block; /* Mostramos el botón de hamburguesa */
+    display: block;
   }
 
   .main-nav {
     position: fixed;
-    inset: 0; /* Ocupa toda la pantalla */
-    background: rgba(28, 29, 33, 0.98); /* Fondo oscuro semitransparente */
+    inset: 0;
+    background: rgba(28, 29, 33, 0.98);
     backdrop-filter: blur(5px);
     
-    /* Oculto por defecto y centrado */
     display: flex;
     justify-content: center;
     align-items: center;
+
+    /* --- ESTOS SON LOS CAMBIOS CLAVE --- */
+    /* 1. Ocultamos el menú de la vista y de los eventos de clic */
+    visibility: hidden;
+    opacity: 0;
     
-    /* Transición para aparecer/desaparecer */
-    transform: translateY(-100%);
-    transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+    /* 2. Lo movemos fuera de la pantalla para la animación */
+    transform: translateY(-25%); /* Un valor menor para un efecto más sutil */
+    
+    /* 3. Transicionamos todas las propiedades para una animación suave */
+    transition: transform 0.4s ease, opacity 0.4s ease, visibility 0.4s;
   }
 
+  /* CUANDO EL MENÚ ESTÁ ABIERTO */
   .nav-open .main-nav {
-    transform: translateY(0); /* Menú visible */
+    /* Lo traemos de vuelta a su sitio y lo hacemos visible */
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
   }
 
   .main-nav ul {
-    flex-direction: column; /* Apilamos los enlaces verticalmente */
+    flex-direction: column;
     gap: var(--space-lg);
     text-align: center;
   }
 
   .main-nav a {
-    font-size: 1.5rem; /* Letra más grande para mejor legibilidad */
+    font-size: 1.5rem;
     padding: .5rem 1rem;
+    color: var(--clr-light); /* Aseguramos el color en el menú abierto */
   }
   
-  /* CAMBIO 2: Estilo específico para el botón dentro del menú móvil */
   .main-nav .cta-primary {
     background: var(--clr-accent);
     color: var(--clr-light);
     padding: .75em 1.5em;
     border-radius: 4px;
-    font-size: 1.5rem; /* Asegurar que tenga el mismo tamaño de fuente */
+    font-size: 1.5rem;
   }
 
   .main-nav .cta-primary:hover {
-    background: #8e1515; /* Mantener el efecto hover */
+    background: #8e1515;
   }
 }
 
