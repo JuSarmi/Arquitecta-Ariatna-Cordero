@@ -446,9 +446,9 @@ a:hover{color:var(--clr-accent)}
   object-fit:contain;     /* respeta proporción */
 }
 
-/* opcional: si quieres que siga apareciendo el nombre al lado
-   (logo + texto), descomenta lo siguiente y pon el texto fuera del <img> */
-/*
+
+   (logo + texto), descomenta lo siguiente y pon el texto fuera del <img>
+
 .logo{
   display:flex;
   align-items:center;
