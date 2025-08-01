@@ -406,28 +406,29 @@ a:hover{color:var(--clr-accent)}
   position: fixed;
   inset: 0;
   
-  /* --- CAMBIOS CLAVE --- */
-  /* 1. Fondo sólido de respaldo para navegadores antiguos */
-  background-color: #1c1d21; 
+  /* Quitamos el fondo y el backdrop-filter de aquí */
   
-  /* 2. Fondo con transparencia para navegadores modernos (sobrescribe el anterior si es compatible) */
-  background: rgba(28, 29, 33, 0.98);
-
-  /* El resto de propiedades se mantiene igual */
-  backdrop-filter: blur(5px);
   padding-top: clamp(8rem, 25vh, 12rem);
   visibility: hidden;
   opacity: 0;
   transform: translateY(-25%);
   transition: transform 0.4s ease, opacity 0.4s ease, visibility 0.4s;
 }
-  /* CUANDO EL MENÚ ESTÁ ABIERTO */
-  .nav-open .main-nav {
-    /* Lo traemos de vuelta a su sitio y lo hacemos visible */
-    transform: translateY(0);
-    opacity: 1;
-    visibility: visible;
-  }
+
+/* --- ESTA ES LA NUEVA REGLA CLAVE --- */
+.main-nav::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1; /* Se coloca detrás del contenido del menú (los enlaces) */
+  
+  /* Fondo de respaldo para todos los navegadores */
+  background-color: #1c1d21;
+  
+  /* Fondo con transparencia y efecto para navegadores modernos */
+  background-color: rgba(28, 29, 33, 0.98);
+  backdrop-filter: blur(5px);
+}
 
   .main-nav ul {
     flex-direction: column;
