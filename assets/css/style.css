@@ -457,22 +457,31 @@ a:hover{color:var(--clr-accent)}
   }
 }
 
+
+
 /* =========  LOGO  ========= */
-.logo img{
-  display:block;        /* elimina el espacio bajo la línea de base */
-  width:42px;           /* ajusta al alto de tu barra */
-  height:auto;
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  color: var(--clr-light); /* Hereda el color al texto */
+  font-weight: 600;
 }
 
-/* —— Solo si incluyes texto (opción B) —— */
-.logo{
-  display:flex;
-  align-items:center;
-  gap:.5rem;            /* espacio entre icono y texto */
-  font-weight:600;
+.logo-link img {
+  display: block; /* Evita espacio extra debajo de la imagen */
+  width: 42px;
+  height: auto;
 }
 
-.logo__text{ /* opcional: estilos del texto */
-  font-size:1rem;
-  line-height:1;
+.logo-text {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+/* Ocultar el texto del logo en pantallas muy pequeñas para evitar que se rompa */
+@media (max-width: 360px) {
+  .logo-text {
+    display: none;
+  }
 }
