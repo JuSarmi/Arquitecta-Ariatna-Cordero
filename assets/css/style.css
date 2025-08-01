@@ -394,6 +394,11 @@ a:hover{color:var(--clr-accent)}
 
 /* Media Query para pantallas pequeñas (móviles) */
 @media (max-width: 768px) {
+  /* CAMBIO 1: Ajustar el nav-wrapper para que no limite el menú */
+  .nav-wrapper {
+    padding-inline: var(--space-md);
+  }
+
   .nav-toggle {
     display: block; /* Mostramos el botón de hamburguesa */
   }
@@ -429,12 +434,17 @@ a:hover{color:var(--clr-accent)}
     padding: .5rem 1rem;
   }
   
+  /* CAMBIO 2: Estilo específico para el botón dentro del menú móvil */
   .main-nav .cta-primary {
-    /* Si tienes un botón de contacto, hacemos que se vea diferente */
     background: var(--clr-accent);
     color: var(--clr-light);
     padding: .75em 1.5em;
     border-radius: 4px;
+    font-size: 1.5rem; /* Asegurar que tenga el mismo tamaño de fuente */
+  }
+
+  .main-nav .cta-primary:hover {
+    background: #8e1515; /* Mantener el efecto hover */
   }
 }
 
