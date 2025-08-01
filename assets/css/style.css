@@ -63,13 +63,13 @@ a:hover{color:var(--clr-accent)}
   z-index:100;
   box-shadow:0 4px 10px rgba(0,0,0,.15);
 }
-.nav-wrapper{
-  max-width:var(--content-max);
-  margin-inline:auto;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:var(--space-sm) var(--space-xs);
+.nav-wrapper {
+  max-width: var(--content-max);
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Esto vuelve a funcionar */
+  padding: var(--space-sm) var(--space-xs);
 }
 .logo{
   font-weight:700;
@@ -460,28 +460,31 @@ a:hover{color:var(--clr-accent)}
 
 
 /* =========  LOGO  ========= */
-.logo-wrapper {
+.logo {
   display: flex;
   align-items: center;
   gap: .5rem;
-  color: var(--clr-light); /* Hereda el color al texto */
+  color: var(--clr-light);
   font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: .05em;
 }
 
-.logo-link img {
-  display: block; /* Evita espacio extra debajo de la imagen */
-  width: 42px;
-  height: auto;
+.logo img {
+  display: block;
 }
 
 .logo-text {
-  font-size: 1rem;
   line-height: 1;
 }
 
-/* Ocultar el texto del logo en pantallas muy pequeñas para evitar que se rompa */
 @media (max-width: 360px) {
   .logo-text {
     display: none;
   }
 }
+
+
+
+
+
