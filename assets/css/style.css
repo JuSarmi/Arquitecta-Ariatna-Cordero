@@ -405,26 +405,22 @@ a:hover{color:var(--clr-accent)}
 .main-nav {
   position: fixed;
   inset: 0;
-  background: rgba(28, 29, 33, 0.98);
-  backdrop-filter: blur(5px);
-  /* --- CAMBIOS CLAVE --- */
-  /* 1. Eliminamos Flexbox para el centrado */
-  /* display: flex; justify-content: center; align-items: center; */
   
-  /* 2. Añadimos padding para empujar el contenido hacia abajo */
-  padding-top: clamp(8rem, 25vh, 12rem); /* <-- Esta es la línea mágica */
-    /* --- ESTOS SON LOS CAMBIOS CLAVE --- */
-    /* 1. Ocultamos el menú de la vista y de los eventos de clic */
-    visibility: hidden;
-    opacity: 0;
-    
-    /* 2. Lo movemos fuera de la pantalla para la animación */
-    transform: translateY(-25%); /* Un valor menor para un efecto más sutil */
-    
-    /* 3. Transicionamos todas las propiedades para una animación suave */
-    transition: transform 0.4s ease, opacity 0.4s ease, visibility 0.4s;
-  }
+  /* --- CAMBIOS CLAVE --- */
+  /* 1. Fondo sólido de respaldo para navegadores antiguos */
+  background-color: #1c1d21; 
+  
+  /* 2. Fondo con transparencia para navegadores modernos (sobrescribe el anterior si es compatible) */
+  background: rgba(28, 29, 33, 0.98);
 
+  /* El resto de propiedades se mantiene igual */
+  backdrop-filter: blur(5px);
+  padding-top: clamp(8rem, 25vh, 12rem);
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-25%);
+  transition: transform 0.4s ease, opacity 0.4s ease, visibility 0.4s;
+}
   /* CUANDO EL MENÚ ESTÁ ABIERTO */
   .nav-open .main-nav {
     /* Lo traemos de vuelta a su sitio y lo hacemos visible */
