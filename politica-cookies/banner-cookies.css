@@ -12,6 +12,8 @@
     align-items: center;
     z-index: 1000;
     box-sizing: border-box;
+    /* Transición para la desaparición */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 #cookie-banner p {
