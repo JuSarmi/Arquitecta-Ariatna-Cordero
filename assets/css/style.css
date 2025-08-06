@@ -406,20 +406,20 @@ a:hover{color:var(--clr-accent)}
     inset: 0;
     
     display: flex;
-    flex-direction: column; /* Apila los elementos verticalmente */
-    justify-content: center; /* Centra verticalmente */
-    align-items: center;     /* Centra horizontalmente */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
-    background: rgba(28, 29, 33, 0.95); /* Fondo sólido con ligera transparencia */
+    background: rgba(28, 29, 33, 0.95);
 
-    /* Ocultamos el menú por defecto */
+    /* Ocultamos el menú por defecto y lo preparamos para la animación */
     visibility: hidden;
     opacity: 0;
-    transform: scale(0.95); /* Animación de zoom sutil */
+    transform: scale(0.95);
     transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
   }
 
-  /* Muestra el menú cuando está abierto */
+  /* Muestra el menú SOLO cuando el body tiene la clase .nav-open */
   .nav-open .main-nav {
     visibility: visible;
     opacity: 1;
@@ -427,33 +427,16 @@ a:hover{color:var(--clr-accent)}
   }
 
   .main-nav ul {
-    display: flex; /* Permite que los elementos de la lista se organicen */
     flex-direction: column;
-    align-items: center;
     gap: var(--space-lg);
     text-align: center;
-    margin: 0;
-    padding: 0;
   }
 
   .main-nav a {
     font-size: 1.5rem;
     padding: .5rem 1rem;
-    color: var(--clr-light);
-  }
-
-  .main-nav .cta-primary {
-    background: var(--clr-accent);
-    color: var(--clr-light);
-    padding: .75em 1.5em;
-    border-radius: 4px;
-  }
-
-  .main-nav .cta-primary:hover {
-    background: #8e1515;
   }
 }
-
 /* =========  LOGO  ========= */
 
 .logo {
