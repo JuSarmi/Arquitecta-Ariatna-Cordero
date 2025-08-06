@@ -459,6 +459,9 @@ a:hover{color:var(--clr-accent)}
   display: block;
   flex-shrink: 0; /* Evita que la imagen se encoja */
 }
+/* Oculta mientras carga */
+.logo img:-moz-loading,
+.logo img:pending{visibility:hidden;}
 
 .logo-text {
   line-height: 1.2; /* Mejora la legibilidad vertical */
