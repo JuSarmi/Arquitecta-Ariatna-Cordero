@@ -68,7 +68,8 @@
 }
 </script>
 
-
+<!-- Preload the logo -->
+<link rel="preload" as="image" href="assets/img/logo-ac.svg" type="image/svg+xml">
 
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -79,15 +80,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 
 
-<meta http-equiv="Content-Security-Policy" 
-      content="default-src 'self'; 
-               script-src 'self' https://www.googletagmanager.com; 
-               frame-src 'self' https://www.googletagmanager.com;
-               img-src 'self' https://www.googletagmanager.com https://stats.g.doubleclick.net https://www.google.com.co https://www.google.com;
-               connect-src 'self' https://analytics.google.com https://stats.g.doubleclick.net;">  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-  <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
-  
+<meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  script-src  'self' https://www.googletagmanager.com;
+  frame-src   'self' https://www.googletagmanager.com;
+  connect-src 'self'
+              https://www.google-analytics.com https://region1.google-analytics.com
+              https://stats.g.doubleclick.net https://googleads.g.doubleclick.net https://www.googleadservices.com;
+  img-src     'self' data:
+              https://www.googletagmanager.com https://www.google-analytics.com
+              https://stats.g.doubleclick.net https://googleads.g.doubleclick.net
+              https://www.google.com https://www.google.com.co;
+">
 
 
 </head>
@@ -105,7 +109,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="nav-wrapper">
     <!-- 1. Logo -->
     <a href="index.html" class="logo">
-      <link rel="preload" as="image" href="assets/img/logo-ac.svg" type="image/svg+xml">
       <img src="assets/img/logo-ac.svg" width="42" height="42" alt="" fetchpriority="high" loading="eager">
       <span class="logo-text">Ariatna Cordero</span>
     </a>
